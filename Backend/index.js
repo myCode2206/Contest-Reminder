@@ -18,7 +18,7 @@ const app = express();
 // Middleware setupconnect-mongo
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "*",
     credentials: true,
   })
 );
