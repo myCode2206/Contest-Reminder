@@ -28,7 +28,7 @@ app.use(methodOverride("_method"));
 
 // Database connection
 mongoose
-  .connect("mongodb://localhost:27017/contestque")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("DB CONNECTED");
   })
