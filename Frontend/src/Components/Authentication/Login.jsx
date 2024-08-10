@@ -23,10 +23,13 @@ const LogIn = () => {
     e.preventDefault();
     const { password, username } = formData;
     try {
-      const res = await axios.post("http://localhost:5000/login", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        "https://contest-reminder-backend.vercel.app/login",
+        {
+          username,
+          password,
+        }
+      );
       console.log(res);
     } catch (e) {
       console.error("Error:", e);
@@ -37,7 +40,7 @@ const LogIn = () => {
     });
   };
   const googleLogIn = async () => {
-    window.open("http://localhost:5000/google", "_self");
+    window.open("https://contest-reminder-backend.vercel.app/google", "_self");
   };
   return (
     <>
