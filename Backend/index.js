@@ -106,6 +106,9 @@ passport.use(
 app.use(authRoutes);
 app.use(contestRoutes);
 
+app.get("/", (req, res) => {
+  res.json({ msg: "Hello From Contest Reminder Site" });
+});
 // Server setup
 const PORT = 5000;
 app.listen(PORT, () => {
