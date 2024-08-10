@@ -116,7 +116,7 @@ const SignUp = () => {
                 type="submit"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline w-full"
               >
-                LogIn
+                Sign Up
               </button>
             </div>
             <div className="text-center mt-4">
