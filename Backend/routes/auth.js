@@ -9,10 +9,14 @@ router.get("/auth/hello", (req, res) => {
 });
 
 router.post("/signup", async (req, res) => {
-  const { username, email, password } = req.body;
-  const user = new User({ username, email });
-  const newUser = await User.register(user, password);
-  res.status(200).json({ msg: "registered successfully" });
+  try {
+    const { username, email, password } = req.body;
+    const user = new User({ username, email });
+    const newUser = await User.register(user, password);
+    res.status(200).json({ msg: "registered successfully" });
+  } catch (e) {
+    res.status(401).json({ msg: e });
+  }
 });
 
 router.get("/login/success", (req, res) => {
