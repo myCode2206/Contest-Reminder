@@ -64,7 +64,8 @@ router.get(
 router.post(
   "/login",
   passport.authenticate("local", {
-    failureRedirect: "https://contest-reminder.vercel.app/",
+    successRedirect: "https://contest-reminder.vercel.app/",
+    failureRedirect: "https://contest-reminder.vercel.app/1234",
     failureFlash: false,
   }),
   (req, res) => {
