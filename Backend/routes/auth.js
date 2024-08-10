@@ -8,7 +8,7 @@ router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
   const user = new User({ username, email });
   const newUser = await User.register(user, password);
-  res.send({ msg: "registered successfully" });
+  res.status(200).json({ msg: "registered successfully" });
 });
 
 router.get("/login/success", (req, res) => {
