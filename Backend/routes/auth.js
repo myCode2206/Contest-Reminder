@@ -64,12 +64,11 @@ router.get(
 router.post(
   "/login",
   passport.authenticate("local", {
-    failureRedirect: "/login",
+    failureRedirect: "https://contest-reminder.vercel.app/",
     failureFlash: false,
   }),
   (req, res) => {
-    console.log("logged In Successfully");
-    res.send({ msg: "logged in successfully" });
+    res.send({ msg: req.user });
   }
 );
 
