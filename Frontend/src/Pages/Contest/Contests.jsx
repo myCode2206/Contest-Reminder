@@ -12,7 +12,7 @@ const Contests = () => {
     const fetchContests = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/codeforces/contest/all"
+          "https://contest-reminder-backend.vercel.app/codeforces/contest/all"
         );
 
         console.log(response.status);

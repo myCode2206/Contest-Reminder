@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchuserinfo = () => {
-      fetch("http://localhost:5000/login/success", {
+      fetch("https://contest-reminder-backend.vercel.app/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
