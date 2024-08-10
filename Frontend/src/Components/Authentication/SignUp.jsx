@@ -24,11 +24,14 @@ const SignUp = () => {
     e.preventDefault();
     const { email, password, username } = formData;
     try {
-      const res = await axios.post("http://localhost:5000/signup", {
-        email,
-        password,
-        username,
-      });
+      const res = await axios.post(
+        "https://contest-reminder-backend.vercel.app/signup",
+        {
+          email,
+          password,
+          username,
+        }
+      );
       console.log(res);
     } catch (e) {
       console.error("Error:", e);
