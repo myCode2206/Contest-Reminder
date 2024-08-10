@@ -4,6 +4,9 @@ const User = require("../models/User");
 const passport = require("passport");
 const sendMail = require("../helper/sendMail");
 
+router.get("/auth", (req, res) => {
+  res.status(200).json({ msg: "Hello from auth routes" });
+});
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
   const user = new User({ username, email });
